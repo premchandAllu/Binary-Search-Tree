@@ -8,10 +8,8 @@ import junit.framework.Assert;
 public class MyBinaryTreeTest {
 
 	@Test
-  public void createBinaryTreeAddIntegersTest() {
-		
-	MyBinaryTree<Integer> myBinaryTree = new MyBinaryTree<Integer>();
-		
+	public void createBinaryTreeSearchIntegerTest() {
+		MyBinaryTree<Integer> myBinaryTree = new MyBinaryTree<Integer>();
 		myBinaryTree.add(56);
 		myBinaryTree.add(30);
 		myBinaryTree.add(70);
@@ -27,6 +25,7 @@ public class MyBinaryTreeTest {
 		myBinaryTree.add(67);
 		int size = myBinaryTree.getSize();
 		Assert.assertEquals(13, size);
+		int key = myBinaryTree.search(63);
+		Assert.assertEquals(63, key);
 	}
-	
 }
